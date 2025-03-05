@@ -1,6 +1,4 @@
 import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
-import * as React from "react";
-
 import {
   Sidebar,
   SidebarContent,
@@ -12,6 +10,7 @@ import {
   SidebarMenuItem,
   SidebarProvider,
 } from "@/components/ui/sidebar";
+import Content from "./Content/Content";
 
 // Menu items.
 const items = [
@@ -48,15 +47,22 @@ const SidebarSection = () => {
       <Sidebar className="bg-transparent fixed">
         <SidebarContent className="bg-red-500 rounded-r-xl border-none">
           <SidebarGroup>
-            <SidebarGroupLabel className="font-semibold p-5 text-3xl text-white">Thelicham</SidebarGroupLabel>
+            <SidebarGroupLabel className="font-semibold p-5 text-3xl text-white">
+              Thelicham
+            </SidebarGroupLabel>
             <SidebarGroupContent>
               <SidebarMenu className="my-16 flex flex-col gap-3.5">
                 {items.map((item) => (
-                  <SidebarMenuItem key={item.title} >
-                    <SidebarMenuButton asChild className="hover:bg-red-400 transition-colors duration-500">
+                  <SidebarMenuItem key={item.title}>
+                    <SidebarMenuButton
+                      asChild
+                      className="hover:bg-red-400 transition-colors duration-500"
+                    >
                       <a href={item.url}>
-                        <item.icon color="#fff" size={32}/>
-                        <span className="text-white text-xl font-normal">{item.title}</span>
+                        <item.icon color="#fff" size={32} />
+                        <span className="text-white text-xl font-normal">
+                          {item.title}
+                        </span>
                       </a>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
@@ -66,6 +72,7 @@ const SidebarSection = () => {
           </SidebarGroup>
         </SidebarContent>
       </Sidebar>
+      <Content />
     </SidebarProvider>
   );
 };

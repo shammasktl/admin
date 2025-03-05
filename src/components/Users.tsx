@@ -8,8 +8,8 @@ type userProps = {
 
 const Users:React.FC<userProps> = ({title, value}) => {
   return (
-    <div className="px-16 py-12 rounded-2xl flex justify-center items-center flex-col bg-slate-200">
-      <h1 className="text-2xl text-center font-semibold w-24 text-red-500">{title}</h1>
+    <div className="px-24 py-12 rounded-2xl flex justify-center items-center flex-col bg-slate-200">
+      <h1 className="text-2xl text-center font-semibold w-full text-red-500">{title}</h1>
       <h2 className="text-lg">
       <NumberTicker 
       value={value}

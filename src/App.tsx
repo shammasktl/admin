@@ -4,9 +4,9 @@ import SidebarSection from './components/SidebarSection'
 function App() {
 
   return (
-    <div className='flex flex-row'>
+    <div className='flex flex-row gap-3'>
       <SidebarSection />
-      <Content />
+      
     </div>
   )
 }
